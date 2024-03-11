@@ -4,10 +4,10 @@
 <dict>
 	<key>Config</key>
 	<dict>
-		<key>BaseURL</key>
-		<string>$(BaseURL)</string>
 		<key>APIToken</key>
 		<string>$(APIToken)</string>
+		<key>BaseURL</key>
+		<string>$(BaseURL)</string>
 	</dict>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
@@ -23,7 +23,7 @@
 					<key>UISceneDelegateClassName</key>
 					<string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
 					<key>UISceneStoryboardFile</key>
-					<string>Main</string>
+					<string>MoviesList</string>
 				</dict>
 			</array>
 		</dict>

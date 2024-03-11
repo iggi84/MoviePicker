@@ -1,0 +1,13 @@
+//
+//  ProductionConfig.xcconfig
+//  Movie Picker
+//
+//  Created by Igor  Vojinovic on 11.3.24..
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+BundleIdentifier = iggi.Movie-Picker
+BaseURL = https:/$()/api.themoviedb.org/3/
+APIToken = eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhYzdmZTRiZjhlM2NkYjBiODhkNGM4NGE1Yzc4NDg3NSIsInN1YiI6IjY0NmY1ODdiMTEzMGJkMDFlZDhlZGE0MiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.CCgnOtiQUYX5I7Yzx4rhA39K2ysCd0KSd9dRgfJsYEA

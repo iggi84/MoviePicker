@@ -14,6 +14,8 @@
 		8BAF87722B9EC87F009E5690 /* Movie_Picker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8BAF87702B9EC87F009E5690 /* Movie_Picker.xcdatamodeld */; };
 		8BAF87742B9EC881009E5690 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BAF87732B9EC881009E5690 /* Assets.xcassets */; };
 		8BAF87772B9EC881009E5690 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BAF87752B9EC881009E5690 /* LaunchScreen.storyboard */; };
+		8BAF87842B9ED039009E5690 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 8BAF87832B9ED039009E5690 /* Alamofire */; };
+		8BAF87862B9ED039009E5690 /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 8BAF87852B9ED039009E5690 /* AlamofireDynamic */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BAF87842B9ED039009E5690 /* Alamofire in Frameworks */,
+				8BAF87862B9ED039009E5690 /* AlamofireDynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,6 +122,10 @@
 			dependencies = (
 			);
 			name = "Movie Picker";
+			packageProductDependencies = (
+				8BAF87832B9ED039009E5690 /* Alamofire */,
+				8BAF87852B9ED039009E5690 /* AlamofireDynamic */,
+			);
 			productName = "Movie Picker";
 			productReference = 8BAF87642B9EC87F009E5690 /* Movie Picker.app */;
 			productType = "com.apple.product-type.application";
@@ -146,6 +154,9 @@
 				Base,
 			);
 			mainGroup = 8BAF875B2B9EC87F009E5690;
+			packageReferences = (
+				8BAF87822B9ED039009E5690 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 8BAF87652B9EC87F009E5690 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -399,6 +410,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8BAF87822B9ED039009E5690 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8BAF87832B9ED039009E5690 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8BAF87822B9ED039009E5690 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		8BAF87852B9ED039009E5690 /* AlamofireDynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8BAF87822B9ED039009E5690 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = AlamofireDynamic;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		8BAF87702B9EC87F009E5690 /* Movie_Picker.xcdatamodeld */ = {

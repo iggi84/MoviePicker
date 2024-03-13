@@ -156,7 +156,6 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="G3o-iX-9Rf" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="BEO-bi-CWx">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

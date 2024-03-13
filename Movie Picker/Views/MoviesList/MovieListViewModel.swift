@@ -21,6 +21,8 @@ final class MovieListViewModel {
     }
     private var searchedMovies: [MovieResponse] = []
     private var currentPage = 1
+    private var isLocadingData = false
+    private var hasNext = true
     
     // MARK: - Init
     
@@ -56,9 +58,13 @@ extension MovieListViewModel {
         Network.mainService.getRequest(to: Endpoint.search.url, parameters: searchParams, headers: generateHeaders(), expectedReturnType: SearchResponse.self) { [weak self] response in
             do {
                 if let searchResponse = try response() {
+                    if self?.currentPage == (searchResponse.totalPages ?? -1) {
+                        self?.hasNext = false
+                    }
                     self?.currentPage = (searchResponse.page ?? 0) + 1
                     self?.searchedMovies.append(contentsOf: searchResponse.results ?? [])
                     self?.viewState = .success
+                    self?.isLocadingData = false
                 }
             } catch {
                 self?.handleBadResponse(with: error as? CustomError)
@@ -68,8 +74,37 @@ extension MovieListViewModel {
     
     func refreshMovies(for movieName: String) {
         currentPage = 1
+        hasNext = true
+        isLocadingData = false
         searchedMovies.removeAll()
         searchMovie(for: movieName)
+    }
+    
+    func loadNextPage(from scrollView: UIScrollView, movieName: String) {
+        
+        if(scrollView.panGestureRecognizer.translation(in: scrollView.superview).y > 0) {
+            return
+        }
+           
+        guard
+              !searchedMovies.isEmpty,
+              !isLocadingData,
+              hasNext
+        else {
+            return
+        }
+        isLocadingData = true
+        Timer.scheduledTimer(withTimeInterval: 0.2, repeats: false) { [weak self] t in
+            let offset = scrollView.contentOffset.y
+            let totalContentHeight = scrollView.contentSize.height
+            let totalScrollViewFixedHeight = scrollView.frame.size.height
+
+            if offset >= (totalContentHeight - totalScrollViewFixedHeight - 120) {
+                self?.searchMovie(for: movieName)
+            }
+            t.invalidate()
+        }
+
     }
     
     // MARK: - Helpers

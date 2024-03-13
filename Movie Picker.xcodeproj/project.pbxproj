@@ -34,6 +34,7 @@
 		8BAF87C62BA18A50009E5690 /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAF87C52BA18A50009E5690 /* Identifiable.swift */; };
 		8BAF87CB2BA18AF8009E5690 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAF87C92BA18AF8009E5690 /* MovieCell.swift */; };
 		8BAF87CC2BA18AF8009E5690 /* MovieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BAF87CA2BA18AF8009E5690 /* MovieCell.xib */; };
+		8BAF87CE2BA1CC6B009E5690 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAF87CD2BA1CC6B009E5690 /* DateHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +66,7 @@
 		8BAF87C52BA18A50009E5690 /* Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
 		8BAF87C92BA18AF8009E5690 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 		8BAF87CA2BA18AF8009E5690 /* MovieCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCell.xib; sourceTree = "<group>"; };
+		8BAF87CD2BA1CC6B009E5690 /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 				8BAF87C12BA1793D009E5690 /* DisplayError.swift */,
 				8BAF87C32BA18A2F009E5690 /* NibProtocol.swift */,
 				8BAF87C52BA18A50009E5690 /* Identifiable.swift */,
+				8BAF87CD2BA1CC6B009E5690 /* DateHelper.swift */,
 			);
 			path = UtilitiesAndExtensions;
 			sourceTree = "<group>";
@@ -314,6 +317,7 @@
 				8BAF87902B9F16F1009E5690 /* AppConfig.swift in Sources */,
 				8BAF87682B9EC87F009E5690 /* AppDelegate.swift in Sources */,
 				8BAF87B52BA12146009E5690 /* Endpoint.swift in Sources */,
+				8BAF87CE2BA1CC6B009E5690 /* DateHelper.swift in Sources */,
 				8BAF87BC2BA16518009E5690 /* MovieListViewModel.swift in Sources */,
 				8BAF87B92BA15890009E5690 /* CustomError.swift in Sources */,
 				8BAF87B02BA11A14009E5690 /* SearchResponse.swift in Sources */,

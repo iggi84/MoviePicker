@@ -118,3 +118,11 @@ extension MoviesList: UITableViewDataSource, UITableViewDelegate {
     }
 }
 
+extension MoviesList: UIScrollViewDelegate {
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        viewModel.loadNextPage(from: scrollView, movieName: searchTextfield.text ?? "")
+    }
+    
+}
+

@@ -21,6 +21,10 @@ struct MovieResponse: Codable {
     let voteAverage: Double?
     let voteCount: Int?
     
+    var displayDate: String {
+        return DateHelper.shared.formatDate(dateString: releaseDate ?? "")
+    }
+    
     enum CodingKeys: String, CodingKey {
         case adult
         case id

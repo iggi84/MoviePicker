@@ -48,9 +48,6 @@ class MovieCell: UITableViewCell, NibProtocol {
         movieInfoView.layer.shadowOffset = .zero
         movieInfoView.layer.shadowRadius = 1
         movieInfoView.layer.shouldRasterize = true
-//        movieInfoView.layer.rast/*erizationScale = scale ? UIScreen.main.scale : 1*/
-//        movieInfoView.layer.shouldRasterize = true
-        
     }
     
     private func updateUI() {
@@ -60,7 +57,7 @@ class MovieCell: UITableViewCell, NibProtocol {
         let placeholder = UIImage(named: "MoviePlaceholder")
         movieImage.kf.setImage(with: Endpoint.image.imageURL(for: movie.posterPath ?? "", imageSize: .w154), placeholder: placeholder)
         titleLabel.text = movie.title
-        descriptionLabel.text = movie.releaseDate
+        descriptionLabel.text = movie.displayDate
         ratingLabel.text = "\(movie.voteAverage ?? 0.0)"
     }
 }

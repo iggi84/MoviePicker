@@ -134,11 +134,22 @@
                         <outlet property="emptySeacrhView" destination="KQX-3x-wfD" id="D3g-RJ-3Eb"/>
                         <outlet property="searchTextfield" destination="rRV-OM-jLV" id="fDF-PL-nZ3"/>
                         <outlet property="tableView" destination="ZH6-6d-Ku8" id="YFE-qZ-RVa"/>
+                        <segue destination="CT4-sB-fZC" kind="show" identifier="ShowDetails" id="gaW-vY-cIz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1052.6717557251909" y="-2.1126760563380285"/>
+        </scene>
+        <!--MovieDetails-->
+        <scene sceneID="TeQ-Kx-RLl">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MovieDetails" id="CT4-sB-fZC" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Ck3-u0-OsO"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K8R-1m-N1c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1703" y="-282"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="J8Q-n3-Ho2">
@@ -149,6 +160,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="BEO-bi-CWx">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

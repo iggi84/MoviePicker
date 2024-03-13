@@ -35,6 +35,7 @@
 		8BAF87CB2BA18AF8009E5690 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAF87C92BA18AF8009E5690 /* MovieCell.swift */; };
 		8BAF87CC2BA18AF8009E5690 /* MovieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BAF87CA2BA18AF8009E5690 /* MovieCell.xib */; };
 		8BAF87CE2BA1CC6B009E5690 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAF87CD2BA1CC6B009E5690 /* DateHelper.swift */; };
+		8BAF87D02BA1CFD7009E5690 /* MovieDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAF87CF2BA1CFD7009E5690 /* MovieDetailsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +68,7 @@
 		8BAF87C92BA18AF8009E5690 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 		8BAF87CA2BA18AF8009E5690 /* MovieCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCell.xib; sourceTree = "<group>"; };
 		8BAF87CD2BA1CC6B009E5690 /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
+		8BAF87CF2BA1CFD7009E5690 /* MovieDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +183,7 @@
 			children = (
 				8BAF87942B9F22FA009E5690 /* MovieDetails.storyboard */,
 				8BAF87972B9F231A009E5690 /* MovieDetails.swift */,
+				8BAF87CF2BA1CFD7009E5690 /* MovieDetailsViewModel.swift */,
 			);
 			path = MovieDetails;
 			sourceTree = "<group>";
@@ -326,6 +329,7 @@
 				8BAF87C42BA18A2F009E5690 /* NibProtocol.swift in Sources */,
 				8BAF87722B9EC87F009E5690 /* Movie_Picker.xcdatamodeld in Sources */,
 				8BAF876A2B9EC87F009E5690 /* SceneDelegate.swift in Sources */,
+				8BAF87D02BA1CFD7009E5690 /* MovieDetailsViewModel.swift in Sources */,
 				8BAF87C62BA18A50009E5690 /* Identifiable.swift in Sources */,
 				8BAF87CB2BA18AF8009E5690 /* MovieCell.swift in Sources */,
 				8BAF87B72BA130E2009E5690 /* ImageSize.swift in Sources */,

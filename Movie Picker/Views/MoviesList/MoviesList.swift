@@ -75,6 +75,15 @@ class MoviesList: UIViewController {
         alert.addAction(okAction)
         present(alert, animated: true)
     }
+    
+    // MARK: - Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowDetails" {
+            let destination = segue.destination as? MovieDetails
+            destination?.viewModel = MovieDetailsViewModel(movie: viewModel.selectedMovie)
+        }
+    }
 }
 
 // MARK: - ViewStateDelegate
@@ -115,6 +124,12 @@ extension MoviesList: UITableViewDataSource, UITableViewDelegate {
         }
         cell.movie = viewModel.getMovie(for: indexPath)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        viewModel.selectMovie(at: indexPath)
+        tableView.deselectRow(at: indexPath, animated: true)
+        performSegue(withIdentifier: "ShowDetails", sender: self)
     }
 }
 

@@ -23,6 +23,7 @@ final class MovieListViewModel {
     private var currentPage = 1
     private var isLocadingData = false
     private var hasNext = true
+    var selectedMovie: MovieResponse?
     
     // MARK: - Init
     
@@ -41,6 +42,10 @@ extension MovieListViewModel {
     
     func getMovie(for index: IndexPath) -> MovieResponse {
         return searchedMovies[index.row]
+    }
+    
+    func selectMovie(at index: IndexPath) {
+        selectedMovie = getMovie(for: index)
     }
 }
 

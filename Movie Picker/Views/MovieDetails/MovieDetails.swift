@@ -6,24 +6,40 @@
 //
 
 import UIKit
+import Kingfisher
 
-class MovieDetails: UIViewController {
+class MovieDetails: UITableViewController {
 
+    // MARK: - Outlets
+    
+    @IBOutlet weak var movieImage: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var ratingLabel: UILabel!
+    @IBOutlet weak var synopsisLabel: UILabel!
+    
+    // MARK: - Properties
+    
+    var viewModel: MovieDetailsViewModel?
+    
+    // MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        configureUI()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // MARK: - Helpers
+    
+    private func configureUI() {
+        if let movie = viewModel?.movie {
+            let placeholder = UIImage(named: "MoviePlaceholder")
+            movieImage.kf.setImage(with: Endpoint.image.imageURL(for: movie.posterPath ?? "", imageSize: .original), placeholder: placeholder)
+            titleLabel.text = movie.title
+            descriptionLabel.text = movie.displayDate
+            ratingLabel.text = "\(movie.voteAverage ?? 0.0)"
+            synopsisLabel.text = movie.overview
+        }
     }
-    */
-
 }

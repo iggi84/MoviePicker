@@ -18,7 +18,7 @@ struct MovieResponse: Codable {
     let releaseDate: String?
     let title: String?
     let video: Bool?
-    let voteAverage: Int?
+    let voteAverage: Double?
     let voteCount: Int?
     
     enum CodingKeys: String, CodingKey {

@@ -33,6 +33,6 @@ extension UIApplication {
         guard let apiToken = config["APIToken"] as? String else {
             return ""
         }
-        return apiToken
+        return "Bearer " + apiToken
     }
 }

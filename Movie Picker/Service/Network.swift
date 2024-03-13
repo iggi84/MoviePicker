@@ -31,9 +31,9 @@ class Network {
     
     private func handleResponse<T : Codable>(response: DataResponse<T, AFError>, completion: @escaping ThrowableGenericResponse<T>) {
         switch response.result {
-        case .success(let responseData):
+        case .success(_):
             handleCompleteResponse(response: response, completion: completion)
-        case .failure(let error):
+        case .failure(_):
             completion {
                 throw CustomError.timeout
             }

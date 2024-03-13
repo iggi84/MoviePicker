@@ -12,4 +12,5 @@
 
 BundleIdentifier = iggi.Movie-Picker.stage
 BaseURL = https:/$()/api.themoviedb.org/3/
+ImageBaseURL = https:/$()/image.tmdb.org/t/p/
 APIToken = eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhYzdmZTRiZjhlM2NkYjBiODhkNGM4NGE1Yzc4NDg3NSIsInN1YiI6IjY0NmY1ODdiMTEzMGJkMDFlZDhlZGE0MiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.CCgnOtiQUYX5I7Yzx4rhA39K2ysCd0KSd9dRgfJsYEA

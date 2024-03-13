@@ -4,6 +4,8 @@
 <dict>
 	<key>Config</key>
 	<dict>
+		<key>ImageBaseURL</key>
+		<string>$(ImageBaseURL)</string>
 		<key>APIToken</key>
 		<string>$(APIToken)</string>
 		<key>BaseURL</key>

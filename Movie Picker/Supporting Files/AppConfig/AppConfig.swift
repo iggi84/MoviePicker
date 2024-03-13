@@ -22,6 +22,13 @@ extension UIApplication {
         return baseURL
     }
     
+    @objc class var imageBaseURL: String {
+        guard let baseURL = config["ImageBaseURL"] as? String else {
+            return ""
+        }
+        return baseURL
+    }
+    
     @objc class var apiToken: String {
         guard let apiToken = config["APIToken"] as? String else {
             return ""

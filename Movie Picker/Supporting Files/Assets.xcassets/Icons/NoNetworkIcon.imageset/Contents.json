@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "NoNetworkIcon.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

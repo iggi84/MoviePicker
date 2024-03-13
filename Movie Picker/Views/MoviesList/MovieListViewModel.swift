@@ -66,7 +66,15 @@ extension MovieListViewModel {
         }
     }
     
-    func generateHeaders() -> HTTPHeaders {
+    func refreshMovies(for movieName: String) {
+        currentPage = 1
+        searchedMovies.removeAll()
+        searchMovie(for: movieName)
+    }
+    
+    // MARK: - Helpers
+    
+    private func generateHeaders() -> HTTPHeaders {
         var headers = ["Authorization" : UIApplication.apiToken]
         headers["Content-Type"] = "application/json"
         return HTTPHeaders(headers)

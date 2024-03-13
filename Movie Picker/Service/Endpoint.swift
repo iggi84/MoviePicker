@@ -19,8 +19,8 @@ enum Endpoint {
         return UIApplication.imageBaseURL
     }
     
-    func imageURL(for imagePath: String, imageSize: ImageSize) -> String {
-        return "\(url)\(imageSize.rawValue)\(imagePath)"
+    func imageURL(for imagePath: String, imageSize: ImageSize) -> URL? {
+        return URL(string: "\(url)\(imageSize.rawValue)\(imagePath)")
     }
     
     var path: String {

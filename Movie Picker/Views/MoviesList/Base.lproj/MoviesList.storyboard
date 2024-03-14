@@ -34,10 +34,14 @@
                                             <action selector="searchButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gqk-lh-rmU"/>
                                         </connections>
                                     </button>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rRV-OM-jLV">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please enter movie name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rRV-OM-jLV">
                                         <rect key="frame" x="24" y="8" width="298" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                                        <connections>
+                                            <action selector="textChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="RCK-te-QR0"/>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="TVg-dr-RQX"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemCyanColor"/>

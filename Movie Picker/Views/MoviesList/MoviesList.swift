@@ -38,6 +38,11 @@ class MoviesList: UIViewController {
         viewModel.searchMovie(for: searchTextfield.text ?? "")
     }
     
+    @IBAction func textChanged(_ sender: Any) {
+        viewModel.resetSearchParams()
+    }
+    
+    
     // MARK: - Helpers
     
     private func configureUI() {
@@ -137,6 +142,19 @@ extension MoviesList: UITableViewDataSource, UITableViewDelegate {
         performSegue(withIdentifier: "ShowDetails", sender: self)
     }
 }
+
+// MARK: - Texfield delegate
+
+extension MoviesList: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        viewModel.searchMovie(for: searchTextfield.text ?? "")
+        textField.resignFirstResponder()
+        return true
+    }
+    
+}
+
+// MARK: - ScrollView Delegate
 
 extension MoviesList: UIScrollViewDelegate {
     

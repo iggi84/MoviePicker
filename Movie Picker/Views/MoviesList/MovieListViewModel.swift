@@ -97,6 +97,14 @@ extension MovieListViewModel {
         searchMovie(for: movieName)
     }
     
+    func resetSearchParams() {
+        currentPage = 1
+        hasNext = true
+        isLocadingData = false
+        searchedMovies.removeAll()
+        viewState = .idle
+    }
+    
     func loadNextPage(from scrollView: UIScrollView, movieName: String) {
         
         if(scrollView.panGestureRecognizer.translation(in: scrollView.superview).y > 0) {

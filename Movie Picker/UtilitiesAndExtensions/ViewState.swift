@@ -12,5 +12,6 @@ enum ViewState {
     case emptyList
     case loadingData
     case success
+    case offline
     case error(DisplayError)
 }

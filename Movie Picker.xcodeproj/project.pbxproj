@@ -36,6 +36,10 @@
 		8BAF87CC2BA18AF8009E5690 /* MovieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BAF87CA2BA18AF8009E5690 /* MovieCell.xib */; };
 		8BAF87CE2BA1CC6B009E5690 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAF87CD2BA1CC6B009E5690 /* DateHelper.swift */; };
 		8BAF87D02BA1CFD7009E5690 /* MovieDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAF87CF2BA1CFD7009E5690 /* MovieDetailsViewModel.swift */; };
+		8BAF87D22BA2729D009E5690 /* DBController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAF87D12BA2729D009E5690 /* DBController.swift */; };
+		8BAF87D52BA27378009E5690 /* SavedMovie+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAF87D32BA27378009E5690 /* SavedMovie+CoreDataClass.swift */; };
+		8BAF87D62BA27378009E5690 /* SavedMovie+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAF87D42BA27378009E5690 /* SavedMovie+CoreDataProperties.swift */; };
+		8BAF87D82BA27C70009E5690 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAF87D72BA27C70009E5690 /* Reachability.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +73,10 @@
 		8BAF87CA2BA18AF8009E5690 /* MovieCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCell.xib; sourceTree = "<group>"; };
 		8BAF87CD2BA1CC6B009E5690 /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 		8BAF87CF2BA1CFD7009E5690 /* MovieDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewModel.swift; sourceTree = "<group>"; };
+		8BAF87D12BA2729D009E5690 /* DBController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBController.swift; sourceTree = "<group>"; };
+		8BAF87D32BA27378009E5690 /* SavedMovie+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SavedMovie+CoreDataClass.swift"; sourceTree = "<group>"; };
+		8BAF87D42BA27378009E5690 /* SavedMovie+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SavedMovie+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		8BAF87D72BA27C70009E5690 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +161,7 @@
 				8BAF87C32BA18A2F009E5690 /* NibProtocol.swift */,
 				8BAF87C52BA18A50009E5690 /* Identifiable.swift */,
 				8BAF87CD2BA1CC6B009E5690 /* DateHelper.swift */,
+				8BAF87D72BA27C70009E5690 /* Reachability.swift */,
 			);
 			path = UtilitiesAndExtensions;
 			sourceTree = "<group>";
@@ -201,6 +210,9 @@
 			isa = PBXGroup;
 			children = (
 				8BAF87702B9EC87F009E5690 /* Movie_Picker.xcdatamodeld */,
+				8BAF87D32BA27378009E5690 /* SavedMovie+CoreDataClass.swift */,
+				8BAF87D42BA27378009E5690 /* SavedMovie+CoreDataProperties.swift */,
+				8BAF87D12BA2729D009E5690 /* DBController.swift */,
 			);
 			path = DB;
 			sourceTree = "<group>";
@@ -324,7 +336,10 @@
 				8BAF87BC2BA16518009E5690 /* MovieListViewModel.swift in Sources */,
 				8BAF87B92BA15890009E5690 /* CustomError.swift in Sources */,
 				8BAF87B02BA11A14009E5690 /* SearchResponse.swift in Sources */,
+				8BAF87D22BA2729D009E5690 /* DBController.swift in Sources */,
+				8BAF87D52BA27378009E5690 /* SavedMovie+CoreDataClass.swift in Sources */,
 				8BAF87BE2BA1659A009E5690 /* ViewState.swift in Sources */,
+				8BAF87D62BA27378009E5690 /* SavedMovie+CoreDataProperties.swift in Sources */,
 				8BAF87B32BA11E58009E5690 /* Network.swift in Sources */,
 				8BAF87C42BA18A2F009E5690 /* NibProtocol.swift in Sources */,
 				8BAF87722B9EC87F009E5690 /* Movie_Picker.xcdatamodeld in Sources */,
@@ -335,6 +350,7 @@
 				8BAF87B72BA130E2009E5690 /* ImageSize.swift in Sources */,
 				8BAF87C22BA1793D009E5690 /* DisplayError.swift in Sources */,
 				8BAF87982B9F231A009E5690 /* MovieDetails.swift in Sources */,
+				8BAF87D82BA27C70009E5690 /* Reachability.swift in Sources */,
 				8BAF87C02BA16697009E5690 /* ViewStateDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -106,11 +106,19 @@
                                     <constraint firstItem="qd8-N8-rvP" firstAttribute="leading" secondItem="dQ3-Ka-kcx" secondAttribute="leading" id="l2v-LQ-ZCP"/>
                                 </constraints>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NoNetworkIcon" translatesAutoresizingMaskIntoConstraints="NO" id="U28-2h-URr">
+                                <rect key="frame" x="342" y="767" width="35" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="6pO-4s-yj3"/>
+                                    <constraint firstAttribute="width" constant="35" id="YhN-OA-YAI"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemCyanColor"/>
                         <constraints>
                             <constraint firstItem="KQX-3x-wfD" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="4Sq-fv-Rcm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="U28-2h-URr" secondAttribute="bottom" constant="16" id="BKQ-x5-HaM"/>
                             <constraint firstItem="dQ3-Ka-kcx" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Qqz-Fm-pkx"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZH6-6d-Ku8" secondAttribute="trailing" id="Tci-Fy-ff0"/>
                             <constraint firstItem="ZH6-6d-Ku8" firstAttribute="top" secondItem="EGW-1f-2M9" secondAttribute="bottom" id="W3I-EB-95n"/>
@@ -119,6 +127,7 @@
                             <constraint firstItem="KQX-3x-wfD" firstAttribute="top" secondItem="EGW-1f-2M9" secondAttribute="bottom" id="elQ-5V-YGc"/>
                             <constraint firstItem="KQX-3x-wfD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hcY-Jj-L7y"/>
                             <constraint firstAttribute="bottom" secondItem="dQ3-Ka-kcx" secondAttribute="bottom" id="l7J-xh-Hd8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="U28-2h-URr" secondAttribute="trailing" constant="16" id="m3c-od-9i8"/>
                             <constraint firstItem="ZH6-6d-Ku8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nyk-YL-vRp"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="KQX-3x-wfD" secondAttribute="bottom" id="ou6-5u-UF3"/>
                             <constraint firstItem="EGW-1f-2M9" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="paP-SI-vK3"/>
@@ -132,6 +141,7 @@
                         <outlet property="activityIndicator" destination="Ncz-2m-1LN" id="2Tp-K2-TGX"/>
                         <outlet property="activityIndicatorView" destination="dQ3-Ka-kcx" id="zrS-7h-KlR"/>
                         <outlet property="emptySeacrhView" destination="KQX-3x-wfD" id="D3g-RJ-3Eb"/>
+                        <outlet property="noNetworkImageView" destination="U28-2h-URr" id="Kqs-3K-t9A"/>
                         <outlet property="searchTextfield" destination="rRV-OM-jLV" id="fDF-PL-nZ3"/>
                         <outlet property="tableView" destination="ZH6-6d-Ku8" id="YFE-qZ-RVa"/>
                         <segue destination="CT4-sB-fZC" kind="show" identifier="ShowDetails" id="gaW-vY-cIz"/>
@@ -173,6 +183,7 @@
     </scenes>
     <resources>
         <image name="InfoIcon" width="24" height="24"/>
+        <image name="NoNetworkIcon" width="25" height="23"/>
         <image name="SearchIcon" width="25" height="25"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

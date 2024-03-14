@@ -56,17 +56,29 @@ extension MovieListViewModel {
     func searchMovie(for movieName: String) {
         viewState = .loadingData
         
+        if !Reachability.isConnectedToNetwork() {
+            searchedMovies.removeAll()
+            if let movies = DBController.shared.getSavedMovies(for: movieName) {
+                searchedMovies.append(contentsOf: movies)
+                viewState = .offline
+            }
+        }
+        
         let searchParams = [
             "query" : movieName,
             "page" : currentPage
         ] as [String : Any]
         Network.mainService.getRequest(to: Endpoint.search.url, parameters: searchParams, headers: generateHeaders(), expectedReturnType: SearchResponse.self) { [weak self] response in
             do {
+                if self?.currentPage == 1 {
+                    self?.searchedMovies.removeAll()
+                }
                 if let searchResponse = try response() {
                     if self?.currentPage == (searchResponse.totalPages ?? -1) {
                         self?.hasNext = false
                     }
                     self?.currentPage = (searchResponse.page ?? 0) + 1
+                    DBController.shared.saveMovies(from: searchResponse.results)
                     self?.searchedMovies.append(contentsOf: searchResponse.results ?? [])
                     self?.viewState = .success
                     self?.isLocadingData = false

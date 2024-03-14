@@ -11,6 +11,7 @@ class MoviesList: UIViewController {
 
     // MARK: - Oulets
     
+    @IBOutlet weak var noNetworkImageView: UIImageView!
     @IBOutlet weak var searchTextfield: UITextField!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var activityIndicatorView: UIView!
@@ -91,7 +92,7 @@ class MoviesList: UIViewController {
 extension MoviesList: ViewStateDelegate {
     
     func didUpdate(with viewState: ViewState) {
-        
+        noNetworkImageView.isHidden = true
         switch viewState {
         case .emptyList:
             hideActivityIndicator()
@@ -99,6 +100,10 @@ extension MoviesList: ViewStateDelegate {
             startActivityIndicator()
         case .idle:
             hideActivityIndicator()
+        case .offline:
+            hideActivityIndicator()
+            tableView.reloadData()
+            noNetworkImageView.isHidden = false
         case .success:
             hideActivityIndicator()
             tableView.reloadData()

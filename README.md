@@ -33,3 +33,9 @@ Your submission will be evaluated based on the following criteria:
     Design: Is the app well-designed and easy to use?
     Performance: Does the app perform well and handle large datasets efficiently?
     Bonus points: Did you implement any of the bonus requirements?
+
+## Running the app
+
+In order to run this app all you need to select targe production and run it.
+
+

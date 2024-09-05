@@ -11,6 +11,7 @@ import UIKit
 enum Endpoint {
     case search
     case image
+    
     var baseURL: String {
         return UIApplication.baseURL
     }

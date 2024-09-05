@@ -35,4 +35,11 @@ extension UIApplication {
         }
         return "Bearer " + apiToken
     }
+    
+    @objc class var bundleID: String {
+        guard let apiToken = config["BundleIdentifier"] as? String else {
+            return ""
+        }
+        return "Bearer " + apiToken
+    }
 }

@@ -53,6 +53,7 @@ extension MovieListViewModel {
 
 extension MovieListViewModel {
     
+    @MainActor
     func searchMovie(for movieName: String) {
         viewState = .loadingData
         
@@ -68,27 +69,24 @@ extension MovieListViewModel {
             "query" : movieName,
             "page" : currentPage
         ] as [String : Any]
-        Network.mainService.getRequest(to: Endpoint.search.url, parameters: searchParams, headers: generateHeaders(), expectedReturnType: SearchResponse.self) { [weak self] response in
+        Task {
             do {
-                if self?.currentPage == 1 {
-                    self?.searchedMovies.removeAll()
+                let searchResponse = try await Network.mainService.getRequest(to: Endpoint.search.url, parameters: searchParams, headers: generateHeaders(), expectedReturnType: SearchResponse.self)
+                if let movies = searchResponse.results {
+                    searchedMovies.append(contentsOf: movies)
+                    viewState = .success
+                } else {
+                    viewState = .emptyList
                 }
-                if let searchResponse = try response() {
-                    if self?.currentPage == (searchResponse.totalPages ?? -1) {
-                        self?.hasNext = false
-                    }
-                    self?.currentPage = (searchResponse.page ?? 0) + 1
-                    DBController.shared.saveMovies(from: searchResponse.results)
-                    self?.searchedMovies.append(contentsOf: searchResponse.results ?? [])
-                    self?.viewState = .success
-                    self?.isLocadingData = false
-                }
+                
             } catch {
-                self?.handleBadResponse(with: error as? CustomError)
+                print("Error!")
+                handleBadResponse(with: error as? CustomError)
             }
         }
     }
     
+    @MainActor
     func refreshMovies(for movieName: String) {
         currentPage = 1
         hasNext = true
@@ -125,7 +123,9 @@ extension MovieListViewModel {
             let totalScrollViewFixedHeight = scrollView.frame.size.height
 
             if offset >= (totalContentHeight - totalScrollViewFixedHeight - 120) {
-                self?.searchMovie(for: movieName)
+                Task{ [weak self] in
+                    await self?.searchMovie(for: movieName)
+                }
             }
             t.invalidate()
         }

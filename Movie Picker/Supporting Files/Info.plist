@@ -4,12 +4,14 @@
 <dict>
 	<key>Config</key>
 	<dict>
-		<key>ImageBaseURL</key>
-		<string>$(ImageBaseURL)</string>
 		<key>APIToken</key>
 		<string>$(APIToken)</string>
 		<key>BaseURL</key>
 		<string>$(BaseURL)</string>
+		<key>ImageBaseURL</key>
+		<string>$(ImageBaseURL)</string>
+		<key>bundleID</key>
+		<string>$(BundleIdentifier)</string>
 	</dict>
 	<key>UIApplicationSceneManifest</key>
 	<dict>

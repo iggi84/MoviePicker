@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B6B5C3F2C894DFE0078A4B2 /* Segues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6B5C3E2C894DFE0078A4B2 /* Segues.swift */; };
 		8BAF87682B9EC87F009E5690 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAF87672B9EC87F009E5690 /* AppDelegate.swift */; };
 		8BAF876A2B9EC87F009E5690 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAF87692B9EC87F009E5690 /* SceneDelegate.swift */; };
 		8BAF876C2B9EC87F009E5690 /* MoviesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAF876B2B9EC87F009E5690 /* MoviesList.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8B6B5C3E2C894DFE0078A4B2 /* Segues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Segues.swift; sourceTree = "<group>"; };
 		8BAF87642B9EC87F009E5690 /* Movie Picker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Movie Picker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BAF87672B9EC87F009E5690 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8BAF87692B9EC87F009E5690 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 				8BAF87C52BA18A50009E5690 /* Identifiable.swift */,
 				8BAF87CD2BA1CC6B009E5690 /* DateHelper.swift */,
 				8BAF87D72BA27C70009E5690 /* Reachability.swift */,
+				8B6B5C3E2C894DFE0078A4B2 /* Segues.swift */,
 			);
 			path = UtilitiesAndExtensions;
 			sourceTree = "<group>";
@@ -327,6 +330,7 @@
 				8BAF876C2B9EC87F009E5690 /* MoviesList.swift in Sources */,
 				8BAF87AE2BA119C9009E5690 /* MovieResponse.swift in Sources */,
 				8BAF87902B9F16F1009E5690 /* AppConfig.swift in Sources */,
+				8B6B5C3F2C894DFE0078A4B2 /* Segues.swift in Sources */,
 				8BAF87682B9EC87F009E5690 /* AppDelegate.swift in Sources */,
 				8BAF87B52BA12146009E5690 /* Endpoint.swift in Sources */,
 				8BAF87CE2BA1CC6B009E5690 /* DateHelper.swift in Sources */,

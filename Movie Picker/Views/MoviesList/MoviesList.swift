@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MoviesList: UIViewController {
+class MoviesList: UIViewController, Segues {
 
     // MARK: - Oulets
     
@@ -85,9 +85,10 @@ class MoviesList: UIViewController {
     // MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "ShowDetails" {
+        switch segueId(for: segue) {
+        case .showMovieDetails:
             let destination = segue.destination as? MovieDetails
-            destination?.viewModel = MovieDetailsViewModel(movie: viewModel.selectedMovie)
+            destination?.viewModel = MovieDetailsViewModel(movie: viewModel.getMovie(for: sender as? Int))
         }
     }
 }
@@ -132,14 +133,13 @@ extension MoviesList: UITableViewDataSource, UITableViewDelegate {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: MovieCell.identifier, for: indexPath) as? MovieCell else {
             return UITableViewCell()
         }
-        cell.movie = viewModel.getMovie(for: indexPath)
+        cell.movie = viewModel.getMovie(for: indexPath.row)
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        viewModel.selectMovie(at: indexPath)
         tableView.deselectRow(at: indexPath, animated: true)
-        performSegue(withIdentifier: "ShowDetails", sender: self)
+        performSegue(withIdentifier: .showMovieDetails, sender: indexPath.row)
     }
 }
 
@@ -162,5 +162,13 @@ extension MoviesList: UIScrollViewDelegate {
         viewModel.loadNextPage(from: scrollView, movieName: searchTextfield.text ?? "")
     }
     
+}
+
+// MARK: - Segues
+
+extension MoviesList {
+    enum SegueIdentifier: String {
+        case showMovieDetails
+    }
 }
 

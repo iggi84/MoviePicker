@@ -23,7 +23,6 @@ final class MovieListViewModel {
     private var currentPage = 1
     private var isLocadingData = false
     private var hasNext = true
-    var selectedMovie: MovieResponse?
     
     // MARK: - Init
     
@@ -40,12 +39,8 @@ extension MovieListViewModel {
         return searchedMovies.count
     }
     
-    func getMovie(for index: IndexPath) -> MovieResponse {
-        return searchedMovies[index.row]
-    }
-    
-    func selectMovie(at index: IndexPath) {
-        selectedMovie = getMovie(for: index)
+    func getMovie(for index: Int?) -> MovieResponse? {
+        return index == nil ? nil : searchedMovies[index ?? 0]
     }
 }
 
@@ -56,14 +51,6 @@ extension MovieListViewModel {
     @MainActor
     func searchMovie(for movieName: String) {
         viewState = .loadingData
-        
-        if !Reachability.isConnectedToNetwork() {
-            searchedMovies.removeAll()
-            if let movies = DBController.shared.getSavedMovies(for: movieName) {
-                searchedMovies.append(contentsOf: movies)
-                viewState = .offline
-            }
-        }
         
         let searchParams = [
             "query" : movieName,

@@ -22,14 +22,15 @@
                                 <rect key="frame" x="0.0" y="59" width="393" height="50"/>
                                 <subviews>
                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G5V-ox-pM0">
-                                        <rect key="frame" x="330" y="3" width="55" height="39"/>
+                                        <rect key="frame" x="330" y="-7" width="55" height="49"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="55" id="AKc-8d-kAU"/>
                                         </constraints>
                                         <color key="tintColor" systemColor="systemBlueColor"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <buttonConfiguration key="configuration" style="plain">
+                                        <buttonConfiguration key="configuration" style="plain" imagePadding="0.0">
                                             <imageReference key="image" image="SearchIcon" symbolScale="default"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="searchButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gqk-lh-rmU"/>
@@ -45,7 +46,7 @@
                                         </connections>
                                     </textField>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemCyanColor"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
                                 <constraints>
                                     <constraint firstItem="rRV-OM-jLV" firstAttribute="top" secondItem="EGW-1f-2M9" secondAttribute="top" constant="8" id="0t4-IE-0IB"/>
                                     <constraint firstAttribute="bottom" secondItem="rRV-OM-jLV" secondAttribute="bottom" constant="8" id="71C-uL-OLm"/>
@@ -98,7 +99,7 @@
                                     </view>
                                     <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Ncz-2m-1LN">
                                         <rect key="frame" x="178" y="407.66666666666669" width="37" height="37"/>
-                                        <color key="color" systemColor="systemCyanColor"/>
+                                        <color key="color" systemColor="systemGreenColor"/>
                                     </activityIndicatorView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -120,7 +121,7 @@
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemCyanColor"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
                         <constraints>
                             <constraint firstItem="KQX-3x-wfD" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="4Sq-fv-Rcm"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="U28-2h-URr" secondAttribute="bottom" constant="16" id="BKQ-x5-HaM"/>
@@ -186,9 +187,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="InfoIcon" width="24" height="24"/>
+        <image name="InfoIcon" width="23" height="22"/>
         <image name="NoNetworkIcon" width="25" height="23"/>
-        <image name="SearchIcon" width="25" height="25"/>
+        <image name="SearchIcon" width="35" height="35"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
@@ -197,6 +198,9 @@
         </systemColor>
         <systemColor name="systemCyanColor">
             <color red="0.1960784314" green="0.67843137249999996" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

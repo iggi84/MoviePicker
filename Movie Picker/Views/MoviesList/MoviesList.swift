@@ -84,6 +84,8 @@ class MoviesList: UIViewController, Segues {
     
     // MARK: - Navigation
     
+    @IBAction func unwindToMovieList(_ unwindSegue: UIStoryboardSegue) {}
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segueId(for: segue) {
         case .showMovieDetails:

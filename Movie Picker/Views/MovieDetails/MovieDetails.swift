@@ -8,7 +8,7 @@
 import UIKit
 import Kingfisher
 
-class MovieDetails: UITableViewController {
+class MovieDetails: UIViewController {
 
     // MARK: - Outlets
     
@@ -30,6 +30,12 @@ class MovieDetails: UITableViewController {
         configureUI()
     }
     
+    // MARK: - Actions
+    
+    @IBAction func backButtonTapped(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
+    }
+    
     // MARK: - Helpers
     
     private func configureUI() {
@@ -41,17 +47,5 @@ class MovieDetails: UITableViewController {
             ratingLabel.text = "\(movie.voteAverage ?? 0.0)"
             synopsisLabel.text = movie.overview
         }
-    }
-    
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableView.automaticDimension
-    }
-    
-    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 0
-    }
-    
-    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 0
     }
 }
